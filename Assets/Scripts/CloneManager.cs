@@ -26,13 +26,13 @@ public class CloneManager : MonoBehaviour
     {
         if (_characters.Count > 0)
         {
-            _characters[charID].GetComponent<PlayerInput>().enabled=false;
+            _characters[charID].GetComponent<PlayerInputs>().enabled=false;
             charID++;
             if (charID >= _characters.Count)
             {
                 charID = 0;
             }
-            _characters[charID].GetComponent<PlayerInput>().enabled = true;
+            _characters[charID].GetComponent<PlayerInputs>().enabled = true;
             _currentPlayer = charID;
             foreach (Clone c in _characters)
             {
